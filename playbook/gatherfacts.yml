@@ -1,0 +1,7 @@
+- name: gatherfacts
+  hosts: all
+  Tasks:
+    - name: gatherfacts from node
+      debug: 
+        msg:
+        - "node distro is {ansible_distribution}" 
