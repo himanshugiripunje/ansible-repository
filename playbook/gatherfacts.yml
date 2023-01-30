@@ -1,7 +1,6 @@
-- name: gatherfacts
+- name: sample playbooks
   hosts: all
-  Tasks:
-    - name: gatherfacts from node
+  tasks:
+    - name: sample playbooks
       debug: 
-        msg:
-        - "node distro is {ansible_distribution}" 
+        msg: "hello world"
