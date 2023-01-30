@@ -3,6 +3,6 @@
   become: yes
   tasks:
     - name: install packages
-        package:
-              - name: httpd
-              - state: present
+      yum:
+        name: httpd
+        state: present      
