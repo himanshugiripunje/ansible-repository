@@ -4,4 +4,3 @@
       - name: gather-facts
         debug: 
           msg: "ansible distro {{ansible_distribution}}"
-
