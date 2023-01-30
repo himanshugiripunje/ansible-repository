@@ -5,9 +5,8 @@
     - name: install packages
       yum:
         name: 
-           - vsftpd 
-           - gzip2
-           - rsync
+           - httpd
+           - mariadb
+           - nfs-utils
            - tree
-          
         state: present     
