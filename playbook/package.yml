@@ -2,7 +2,7 @@
   hosts: all
   become: yes
   tasks:
-      - name: install packages
+    - name: install packages
         package:
-               - name: httpd
-               - state: present
+              - name: httpd
+              - state: present
