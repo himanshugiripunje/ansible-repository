@@ -1,0 +1,6 @@
+- name: sample playbooks
+  hosts: all
+  tasks:
+    - name: sample playbooks
+      debug: 
+        msg: "hello world"
