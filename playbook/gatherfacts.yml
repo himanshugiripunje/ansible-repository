@@ -1,6 +1,7 @@
-- name: gather facts from the node
-  hosts: all 
-  Tasks:
-    - name: gather facts from slave nodes
-     debug: 
-       msg: node distro is "{ansible_distribution}"
+ - name: gather-facts
+   hosts: all
+   tasks:
+      - name: gather-facts
+        debug: 
+          msg: "ansible distro {{ansible_distribution}}"
+
