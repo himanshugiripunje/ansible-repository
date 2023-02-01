@@ -1,0 +1,8 @@
+- name: variable values
+  hosts: all
+  vars:
+    url: www.global.com
+  tasks:
+    - name: printing variable values
+      debug:
+        msg: "the value of the variable is {{url}}"
