@@ -12,5 +12,5 @@
     - name: task-2
       debug: 
         msg: "the value of the variable is {{url}}"
-      vars_files:
+      var_files:
             - file_vars.yml
