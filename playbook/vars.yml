@@ -8,7 +8,7 @@
         msg: "the value of the variable is {{url}}"
       vars:
         url: www.mylocal.com
-        var_file: filevars.yml
+        var_files: filevars.yml
     - name: task-2
       debug: 
         msg: "the value of the variable is {{url}}"
