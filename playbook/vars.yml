@@ -6,3 +6,5 @@
     - name: printing variable values
       debug:
         msg: "the value of the variable is {{url}}"
+      vars:
+        url: www.mylocal.com
