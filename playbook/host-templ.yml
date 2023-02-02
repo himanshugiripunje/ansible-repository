@@ -22,8 +22,9 @@
 
     - name: Unarchive CSS template /mnt/. /var/www/html/
       unarchive: 
-      src: /mnt/onix-digital.zip 
-      dest: /var/www/html/
+        src: /mnt/onix-digital.zip 
+        dest: /var/www/html/
+        remote_src: yes
 
 
 
