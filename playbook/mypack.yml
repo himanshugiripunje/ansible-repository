@@ -1,0 +1,6 @@
+- name: install package
+  hosts: all
+  become: yes
+  tasks: install mariadb
+    - name: install
+      yum: name=mariadb state=present
