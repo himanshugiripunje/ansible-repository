@@ -4,10 +4,9 @@
   tasks:
     - name: install httpd server
       yum: name=httpd state=present
-      notify:
-        - "restart httpd"
-  handlers:
-    - name: restart httpd
+      shell: systemctl start httpd
+      shell: systemctl enable http
+ 
       service: name=httpd state=restarted
     - name: download CSS template 
       get_url:
