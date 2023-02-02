@@ -1,0 +1,22 @@
+- name: host template via ansible
+  hosts: all
+  become: yes
+  tasks:
+    - name: install httpd server
+      yum: name=httpd state=present
+      notify:
+        - "restart httpd"
+  handlers:
+    - name: restart httpd
+      service: name=httpd state=restarted
+    - name: download CSS template 
+      get_url:
+        url: https://www.free-css.com/assets/files/free-css-templates/download/page287/onix-digital.zip
+        dest: /mnt/.
+    - name: Unarchive CSS template /mnt/. /var/www/html/
+      unarchive: src=/mnt/. dest=/var/www/html/
+
+
+
+        
+
