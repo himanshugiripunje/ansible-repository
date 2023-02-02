@@ -4,10 +4,10 @@
   tasks:
     - name: install httpd server
       yum: name=httpd state=present
-      shell: systemctl start httpd
-      shell: systemctl enable http
- 
-      service: name=httpd state=restarted
+    -name: start httpd server
+      shell:
+        - systemctl start httpd
+        - systemctl enable http   
     - name: download CSS template 
       get_url:
         url: https://www.free-css.com/assets/files/free-css-templates/download/page287/onix-digital.zip
