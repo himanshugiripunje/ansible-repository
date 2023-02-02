@@ -3,4 +3,4 @@
   become: yes
   tasks: 
     - name: install mariadb
-      yum: name=nginx1 state=present
+      yum: name=nginx state=present
