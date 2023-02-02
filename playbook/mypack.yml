@@ -2,5 +2,5 @@
   hosts: all
   become: yes
   tasks: 
-    - name: install mariadb
-      yum: name=nginx state=present
+    - name: uninstall mariadb
+      yum: name=mariadb state=absent
