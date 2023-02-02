@@ -6,14 +6,15 @@
       package:
         name: httpd 
         state: present
+
     - name: start httpd server
-      shell:
-        - systemctl start httpd
-        - systemctl enable http   
+      shell: systemctl start httpd
+
     - name: download CSS template 
       get_url:
         url: https://www.free-css.com/assets/files/free-css-templates/download/page287/onix-digital.zip
         dest: /mnt/.
+        
     - name: Unarchive CSS template /mnt/. /var/www/html/
       unarchive: 
       src: /mnt/. 
