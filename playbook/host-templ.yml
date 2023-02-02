@@ -3,9 +3,7 @@
   become: yes
   tasks:
     - name: install httpd server
-      package:
-        name: httpd 
-        state: present
+      yum: name=httpd state=present
 
     - name: start httpd server
       shell: systemctl start httpd

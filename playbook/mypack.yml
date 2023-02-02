@@ -3,4 +3,4 @@
   become: yes
   tasks: 
     - name: uninstall mariadb
-      yum: name=httpd state=absent
+      yum: name=httpd state=
