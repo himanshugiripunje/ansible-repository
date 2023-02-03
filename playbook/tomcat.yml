@@ -18,12 +18,10 @@
         src: "{{download_url}}" 
         dest: /opt
         remote_src: yes
-   
-
 
     - name: catalina starting tomcat-9
-      shell:  nohup /opt/apache-tomcat-9.0.71/bin/shutdown.sh 
+      shell:   ./opt/apache-tomcat-9.0.71/bin/shutdown.sh 
     - name: catalina stopping tomcat-9
-      shell: nohup /opt/apache-tomcat-9.0.71/bin/startup.sh
+      shell:  ./opt/apache-tomcat-9.0.71/bin/startup.sh
 
    
