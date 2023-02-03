@@ -23,8 +23,8 @@
     - name: changing permissions
       shell: "chmod +x /opt/tomcat-9/bin/catalina.sh"
     - name: catalina starting tomcat-9
-      shell: "./opt/tomcat-9/bin/catalina.sh stop"
+      shell: "nohup ./opt/tomcat-9/bin/catalina.sh stop"
     - name: catalina stopping tomcat-9
-      shell: "./opt/tomcat-9/bin/catalina.sh start"
+      shell: "nohup ./opt/tomcat-9/bin/catalina.sh start"
 
    
