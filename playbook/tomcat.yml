@@ -23,10 +23,14 @@
     - name: moving tomcat-9
       shell: "mv /opt/tomcat-9/apache*/* /opt/tomcat-9"
     - name: changing permissions
-      shell: "chmod +x /opt/tomcat-9/bin/catalina.sh"
+      shell: "chmod +x /opt/tomcat-9/bin/shutdown.sh"
+
+    - name: changing permissions
+      shell: "chmod +x /opt/tomcat-9/bin/startup.sh"
+
     - name: catalina starting tomcat-9
-      shell: "nohup ./opt/tomcat-9/bin/shutdown.sh stop"
+      shell: " ./opt/tomcat-9/bin/shutdown.sh "
     - name: catalina stopping tomcat-9
-      shell: "nohup ./opt/tomcat-9/bin/startup.sh start"
+      shell: " ./opt/tomcat-9/bin/startup.sh "
 
    
