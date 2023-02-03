@@ -2,9 +2,10 @@
   hosts: all
   vars: 
    url: www.example.com
+   
   var_files:
     - filevars.yml
-  become: yes 
+  
   tasks:
     - name: variables print
       debug: 
