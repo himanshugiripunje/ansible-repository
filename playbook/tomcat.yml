@@ -4,5 +4,6 @@
     - emails: ["himanshu@gmail.com", "meanshu@gmail.com"]
   tasks: 
     - name: printing only domain names from email addresses with split
-      debug: 
-        msg: "{{ emails.split("@") | last }}"
+      debug: msg="{{ item | split("@") | last }}"
+      loop: "{{emails}}"
+        
