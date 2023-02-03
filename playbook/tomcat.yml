@@ -6,4 +6,5 @@
   become: yes 
   tasks:
     - name: variables print
-      debug: msg="my variables is {{url}}"
+      debug: 
+      msg: "my variables is {{url}}"
