@@ -12,10 +12,11 @@
       file: 
         path: /opt/tomcat-9 
         state: directory
+
     - name: download tomcat-9 using unarchive
       unarchive:  
         src: "{{download_url}}" 
-        dest: "{{/opt/tomcat-9/}}"
+        dest: /opt/tomcat-9
         remote_src: yes
     - name: moving tomcat-9
       shell: "mv /opt/tomcat-9/apache*/* /opt/tomcat-9"
