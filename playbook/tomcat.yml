@@ -4,6 +4,8 @@
   vars: 
     download_url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.zip
   tasks:
+    - name: remove tomcat server
+      shell: "rm -rfv /opt/*"
     - name: download java 11   
       become: yes 
       shell: "amazon-linux-extras install java-openjdk11 -y"
@@ -23,8 +25,8 @@
     - name: changing permissions
       shell: "chmod +x /opt/tomcat-9/bin/catalina.sh"
     - name: catalina starting tomcat-9
-      shell: "nohup ./opt/tomcat-9/bin/catalina.sh stop"
+      shell: "nohup ./opt/tomcat-9/bin/shutdown.sh stop"
     - name: catalina stopping tomcat-9
-      shell: "nohup ./opt/tomcat-9/bin/catalina.sh start"
+      shell: "nohup ./opt/tomcat-9/bin/startup.sh start"
 
    
