@@ -20,6 +20,11 @@
         remote_src: yes
     - name: moving tomcat-9
       shell: "mv /opt/tomcat-9/apache*/* /opt/tomcat-9"
-      
+    - name: changing permissions
+      shell: "chmod +x /opt/tomcat-9/bin/catalina.sh"
+    - name: catalina starting tomcat-9
+      shell: "./opt/tomcat-9/bin/catalina.sh stop"
+    - name: catalina stopping tomcat-9
+      shell: "./opt/tomcat-9/bin/catalina.sh start"
 
    
