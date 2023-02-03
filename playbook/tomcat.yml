@@ -2,7 +2,7 @@
   hosts: all
   vars: 
    url: www.example.com
-
+  vars_files: filevars.yml
   
   
   tasks:
