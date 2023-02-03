@@ -1,9 +1,9 @@
 - name: splitting examples
   hosts: all
   vars: 
-    - emails: ["himanshu@gmail.com", "meanshu@gmail.com"]
+    - emails: ["himanshu@gmail.com"]
   tasks: 
     - name: printing only domain names from email addresses with split
-      debug: msg="{{ emails | splitext }}"
+      debug: msg="{{ emails | split | front }}"
  
         
