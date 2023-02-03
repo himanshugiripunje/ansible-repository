@@ -8,8 +8,10 @@
       shell: "rm -rfv /opt/*"
     
     - name: download java 11   
-      become: yes 
-      shell: "amazon-linux-extras install java-openjdk11 -y"
+      package:
+        name:
+         - default-jdk
+        state: present
         
     
 
