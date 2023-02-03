@@ -18,10 +18,9 @@
         src: "{{download_url}}" 
         dest: /opt
         remote_src: yes
+    - name: running the svcript
+      script: /opt/apache-tomcat-9.0.71/startup.sh
 
-    - name: catalina starting tomcat-9
-      shell:   ./opt/apache-tomcat-9.0.71/bin/shutdown.sh 
-    - name: catalina stopping tomcat-9
-      shell:  ./opt/apache-tomcat-9.0.71/bin/startup.sh
-
+    
+    
    
