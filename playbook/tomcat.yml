@@ -6,27 +6,24 @@
   tasks:
     - name: remove tomcat server
       shell: "rm -rfv /opt/*"
+    
     - name: download java 11   
       become: yes 
       shell: "amazon-linux-extras install java-openjdk11 -y"
         
-    - name: create tomcat-9 directory
-      file: 
-        path: /opt/tomcat-9 
-        state: directory
+    
 
     - name: download tomcat-9 using unarchive
       unarchive:  
         src: "{{download_url}}" 
-        dest: /opt/tomcat-9
+        dest: /opt
         remote_src: yes
-    - name: moving tomcat-9
-      shell: "mv /opt/tomcat-9/apache*/* /opt/tomcat-9"
+   
 
 
     - name: catalina starting tomcat-9
-      shell:  nohup /opt/tomcat-9/bin/shutdown.sh 
+      shell:  nohup /opt/apache-tomcat-9.0.71/bin/shutdown.sh 
     - name: catalina stopping tomcat-9
-      shell: nohup /opt/tomcat-9/bin/startup.sh
+      shell: nohup /opt/apache-tomcat-9.0.71/bin/startup.sh
 
    
