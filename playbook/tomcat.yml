@@ -6,7 +6,7 @@
   tasks:
     - name: download java 11   
       become: yes 
-      shell: "amazon-linux-extras install java-openjdk11"
+      shell: "amazon-linux-extras install java-openjdk11 -y"
         
     - name: create tomcat-9 directory
       file: 
