@@ -18,8 +18,8 @@
         src: "{{download_url}}" 
         dest: /opt
         remote_src: yes
-    - name: chmod
-      shell: chmod +rx /opt/apache-tomcat-9.0.71/bin/catalina.sh
+    # - name: chmod
+    #   shell: chmod +rx /opt/apache-tomcat-9.0.71/bin/catalina.sh
 
     - name: chmod
       shell: chmod +rx /opt/apache-tomcat-9.0.71/bin/startup.sh
