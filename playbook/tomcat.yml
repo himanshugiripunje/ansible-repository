@@ -1,6 +1,9 @@
 - name: splitting examples
   hosts: all
-  
-  tasks: 
-    - name: printing only domain names from email addresses with split
-      debug: msg="{{ "him.uml" | splitext }}"
+  vars: url=www.example.com
+  var_files:
+    - filevars.yml
+  become: yes 
+  tasks:
+    - name: variables print
+      debug: msg="my variables is {{url}}"
