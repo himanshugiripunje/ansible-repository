@@ -2,9 +2,8 @@
   hosts: all
   vars: 
    url: www.example.com
-   
-  var_files:
-    - filevars.yml
+
+  
   
   tasks:
     - name: variables print
