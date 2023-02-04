@@ -1,7 +1,7 @@
     - name: remove tomcat server
       shell: "rm -rfv /opt/*"
     
-    - name: download java 11   
+    # - name: download java 11   
       # package:
       #   name:
       #    - default-jdk
