@@ -1,17 +1,11 @@
-- name: host tomcat server
-  hosts: all
-  become: yes
-  vars: 
-    download_url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.zip
-  tasks:
     - name: remove tomcat server
       shell: "rm -rfv /opt/*"
     
     - name: download java 11   
-      package:
-        name:
-         - default-jdk
-        state: present
+      # package:
+      #   name:
+      #    - default-jdk
+      #   state: present
     - name: download tomcat-9 using unarchive
       unarchive:  
         src: "{{download_url}}" 

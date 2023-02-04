@@ -1,0 +1,5 @@
+- name: host webserver
+  hosts: all
+  become: yes
+  roles:
+    - webserver
